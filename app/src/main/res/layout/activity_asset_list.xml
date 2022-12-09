@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_light"
+    tools:context="unsri.ptba.assetmanagement.Features.ShowAssetList.AssetListActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar1"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/AppTheme.PopupOverlay" />
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/AppTheme.PopupOverlay"
+            app:contentInsetLeft="0dp"
+            app:contentInsetStart="0dp">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:id="@+id/searchEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_toLeftOf="@+id/clearSearch"
+                    android:background="@drawable/edittext_secondary"
+                    android:hint="Cari Aset"
+                    android:inputType="text"
+                    android:padding="10dp"
+                    android:textColor="@color/text_dark"
+                    android:textColorHint="@color/text_semidark" />
+
+                <ImageView
+                    android:id="@+id/clearSearch"
+                    android:layout_width="25dp"
+                    android:layout_height="45dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginHorizontal="15dp"
+                    android:layout_marginVertical="15dp"
+                    android:src="@drawable/ic_cross_circle_light" />
+
+            </RelativeLayout>
+
+        </androidx.appcompat.widget.Toolbar>
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/AppTheme.PopupOverlay"
+            app:contentInsetLeft="0dp"
+            app:contentInsetStart="0dp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/bg_light"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:padding="15dp">
+
+                <EditText
+                    android:id="@+id/datepicker1EditText"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toLeftOf="@+id/datepicker2EditText"
+                    android:inputType="text"
+                    android:hint="Dari"
+                    android:textColor="@color/text_dark"
+                    android:textColorHint="@color/text_semidark"
+                    android:padding="10dp"
+                    android:clickable="false"
+                    android:cursorVisible="false"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false"
+                    android:layout_marginRight="7.5dp"
+                    android:background="@drawable/edittext_primary"/>
+
+                <ImageView
+                    android:id="@+id/clearDate1Image"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_margin="12dp"
+                    android:alpha="0.5"
+                    app:layout_constraintRight_toRightOf="@+id/datepicker1EditText"
+                    app:layout_constraintTop_toTopOf="@+id/datepicker1EditText"
+                    android:src="@drawable/ic_xmark_solid" />
+
+                <EditText
+                    android:id="@+id/datepicker2EditText"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintLeft_toRightOf="@+id/datepicker1EditText"
+                    app:layout_constraintRight_toLeftOf="@+id/filterImage"
+                    app:layout_constraintTop_toBottomOf="@+id/datepicker2Title"
+                    android:inputType="text"
+                    android:hint="Sampai"
+                    android:textColor="@color/text_dark"
+                    android:textColorHint="@color/text_semidark"
+                    android:padding="10dp"
+                    android:clickable="false"
+                    android:cursorVisible="false"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false"
+                    android:layout_marginLeft="7.5dp"
+                    android:background="@drawable/edittext_primary"/>
+
+                <ImageView
+                    android:id="@+id/clearDate2Image"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_margin="12dp"
+                    android:alpha="0.5"
+                    app:layout_constraintRight_toRightOf="@+id/datepicker2EditText"
+                    app:layout_constraintTop_toTopOf="@+id/datepicker2EditText"
+                    android:src="@drawable/ic_xmark_solid" />
+
+                <ImageView
+                    android:id="@+id/filterImage"
+                    android:layout_width="25dp"
+                    android:layout_height="45dp"
+                    app:layout_constraintLeft_toRightOf="@+id/datepicker2EditText"
+                    app:layout_constraintRight_toRightOf="parent"
+                    android:layout_marginLeft="15dp"
+                    android:alpha="0.5"
+                    android:src="@drawable/ic_filter" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.appcompat.widget.Toolbar>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <include layout="@layout/content_main" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="@dimen/fab_margin"
+        android:src="@drawable/ic_add_asset" />
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

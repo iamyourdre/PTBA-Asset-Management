@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">PTBA Asset Management</string>
+    <string name="action_settings">Settings</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_create_subject">CreateSubjectActivity</string>
+    <string name="serial_no">SERIAL NUMBER</string>
+    <string name="createdAt">DITAMBAHKAN TGL</string>
+    <string name="updatedAt">DIPERBARUI TGL</string>
+    <string name="deletedAt">Deleted At</string>
+    <string name="assetTag">ASSET TAG</string>
+    <string name="assetSn">SERIAL NUMBER</string>
+    <string name="cross_image_content_description">Delete asset from SQLite database</string>
+    <string name="empty_asset_list_message">Daftar Aset Masih Kosong!</string>
+    <string name="asset_name">NAMA ASET</string>
+    <string name="update">Perbarui</string>
+    <string name="cancel_button">Batal</string>
+    <string name="create_button">Tambahkan</string>
+    <string name="all_delete">All Delete</string>
+    <string name="all_export">All Export</string>
+    <string name="edit_button_description">Edit Single asset information</string>
+</resources>

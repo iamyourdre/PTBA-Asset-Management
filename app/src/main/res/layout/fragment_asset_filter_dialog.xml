@@ -1,0 +1,189 @@
+
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:padding="20dp"
+        tools:context="unsri.ptba.assetmanagement.Features.CreateAsset.AssetCreateDialogFragment">
+
+        <TextView
+            android:id="@id/dialogTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Filter Aset"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="@color/text_dark"
+            android:paddingBottom="20dp"
+            />
+
+
+        <ImageView
+            android:id="@+id/crossImageView"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:alpha="0.5"
+            android:src="@drawable/ic_cross_circle_dark"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@id/datepicker1Title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="DARI TGL"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/dialogTitle"
+            android:textStyle="bold"
+            android:textColor="@color/text_semidark"
+            android:paddingBottom="3dp"
+            />
+
+        <EditText
+            android:id="@+id/datepicker1EditText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@+id/datepicker2EditText"
+            app:layout_constraintTop_toBottomOf="@+id/datepicker1Title"
+            android:inputType="text"
+            android:hint="-"
+            android:padding="10dp"
+            android:clickable="false"
+            android:cursorVisible="false"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+            android:layout_marginRight="7.5dp"
+            android:background="@drawable/edittext_primary"/>
+
+        <ImageView
+            android:id="@+id/clearDate1Image"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_margin="12dp"
+            android:alpha="0.5"
+            app:layout_constraintRight_toRightOf="@+id/datepicker1EditText"
+            app:layout_constraintTop_toTopOf="@+id/datepicker1EditText"
+            android:src="@drawable/ic_xmark_solid" />
+
+        <TextView
+            android:id="@id/datepicker2Title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="SAMPAI TGL"
+            app:layout_constraintLeft_toLeftOf="@+id/datepicker2EditText"
+            app:layout_constraintTop_toBottomOf="@+id/dialogTitle"
+            android:textStyle="bold"
+            android:textColor="@color/text_semidark"
+            android:paddingBottom="3dp"
+            />
+
+        <EditText
+            android:id="@+id/datepicker2EditText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintLeft_toRightOf="@+id/datepicker1EditText"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/datepicker2Title"
+            android:inputType="text"
+            android:hint="-"
+            android:padding="10dp"
+            android:clickable="false"
+            android:cursorVisible="false"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+            android:layout_marginLeft="7.5dp"
+            android:background="@drawable/edittext_primary"/>
+
+        <ImageView
+            android:id="@+id/clearDate2Image"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_margin="12dp"
+            android:alpha="0.5"
+            app:layout_constraintRight_toRightOf="@+id/datepicker2EditText"
+            app:layout_constraintTop_toTopOf="@+id/datepicker2EditText"
+            android:src="@drawable/ic_xmark_solid" />
+
+        <TextView
+            android:id="@id/sortTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="URUTKAN"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/datepicker2EditText"
+            android:textStyle="bold"
+            android:textColor="@color/text_semidark"
+            android:paddingBottom="3dp"
+            android:paddingTop="15dp"
+            />
+
+        <Button
+            android:id="@+id/sortByLastCreated"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/sortTitle"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:text="Terakhir Ditambahkan"
+            android:background="@drawable/rec_btn_secondary"
+            android:textColor="@color/text_primary"/>
+        <Button
+            android:id="@+id/sortByLastUpdated"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/sortByLastCreated"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:text="Terakhir Diperbarui"
+            android:background="@drawable/rec_btn_secondary"
+            android:textColor="@color/text_primary"
+            android:layout_marginTop="15dp"/>
+        <Button
+            android:id="@+id/sortByName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/sortByLastUpdated"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:text="Berdasarkan Nama Aset"
+            android:background="@drawable/rec_btn_secondary"
+            android:textColor="@color/text_primary"
+            android:layout_marginTop="15dp"/>
+        <Button
+            android:id="@+id/sortBySN"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/sortByName"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:text="Berdasarkan Serial Number"
+            android:background="@drawable/rec_btn_secondary"
+            android:textColor="@color/text_primary"
+            android:layout_marginTop="15dp"/>
+        <Button
+            android:id="@+id/sortByTag"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/sortBySN"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:text="Berdasarkan Asset Tag"
+            android:background="@drawable/rec_btn_secondary"
+            android:textColor="@color/text_primary"
+            android:layout_marginTop="15dp"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.core.widget.NestedScrollView>
