@@ -6,11 +6,9 @@ Membuat sebuah aplikasi pendataan serial number dan asset tag barang di PT. Buki
 
 ## ANGGOTA KERJA PRAKTIK :
 
-Adrian Sutansaty ( Programmer )
+Adrian Sutansaty ( Backend Developer )
 
-Annisa Arrayyan ( Perancang Laporan )
-
-Andelle Gianzra Basae ( Tester )
+Andelle Gianzra Basae ( Frontend Developer )
 
 ## SCREENSHOT HALAMAN :
 
