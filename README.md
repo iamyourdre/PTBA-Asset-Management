@@ -10,6 +10,8 @@ Adrian Sutansaty ( Backend Developer )
 
 Andelle Gianzra Basae ( Frontend Developer )
 
+Annisa Arrayyan ( Software Designer )
+
 ## SCREENSHOT HALAMAN :
 
 ### 1. Halaman Utama
